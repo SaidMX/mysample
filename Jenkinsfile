@@ -13,7 +13,7 @@ node {
     }
     stage('Build') {
        echo 'compiling the program'
-       bat label: '', script: '"C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe" "HelloWorld.c" -o "C:\\JenkinsTemp"'
+       bat label: '', script: '"C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe" "HelloWorld.c" -o "C:\\JenkinsTemp\\HelloWorld"'
     }
     stage('Run') {
        echo 'executing the program'
