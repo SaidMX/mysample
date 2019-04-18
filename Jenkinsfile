@@ -16,10 +16,10 @@ node {
    }
    stage('Build') {
        echo 'compiling the program'
-       bat label: '', script: '"./g++.exe" "./HelloWorld.c" -o "./HelloWorld"'
+       bat label: '', script: '"g++.exe" "HelloWorld.c" -o "C:\\JenkinsTemp\\HelloWorld\\HelloWorld"'
    }
    stage('Run') {
        echo 'executing the program'
-       bat label: '', script: '"./HelloWorld"'
+       bat label: '', script: '"C:\\JenkinsTemp\\HelloWorld\\HelloWorld"'
    }
 }
