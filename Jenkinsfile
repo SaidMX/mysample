@@ -1,6 +1,6 @@
 node {
    stage('git'){
-       git pull
+       sh label: '', script: 'git pull'
    }
    stage('Build') {
        echo 'compiling the program'
