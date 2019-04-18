@@ -9,3 +9,4 @@ node {
     stage('Create Package'){
         powershell label: '', script: '.\\Create Chocolatey package for C++ program\\HelloWorld\\ choco pack'
     }
+}
