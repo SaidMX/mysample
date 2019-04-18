@@ -8,7 +8,6 @@ int main(){
 	
 	printf("Hello World =D\n");
 	printf("Press any key\n");
-	getch();
 
 	
 	return 0;
