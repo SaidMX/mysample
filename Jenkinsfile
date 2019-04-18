@@ -1,4 +1,16 @@
 node {
+    stage('MakeDir'){
+       echo 'Checking if directory exist'
+       if (fileExists ('C:\\JenkinsTemp\\HelloWorld')){
+           echo 'deleting directory'
+           bat label: '', script: 'rd /s /q C:\\JenkinsTemp\\HelloWorld'
+       }
+       echo 'creating directory'
+       bat label: '', script: 'MKDIR "C:\\JenkinsTemp\\HelloWorld"'
+   }
+   dir('C:\\JenkinsTemp\\HelloWorld') {
+    // some block
+   }
    stage('git'){
        sh label: '', script: 'git clone git@github.com:SaidMX/mysample.git'
    }
