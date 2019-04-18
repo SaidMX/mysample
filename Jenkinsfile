@@ -1,25 +1,22 @@
 node {
+    stage('git'){
+       git branch: 'master', url: 'https://github.com/SaidMX/mysample.git'
+    }
     stage('MakeDir'){
        echo 'Checking if directory exist'
-       if (fileExists ('C:\\JenkinsTemp\\HelloWorld')){
+       if (fileExists ('C:\\JenkinsTemp')){
            echo 'deleting directory'
-           bat label: '', script: 'rd /s /q C:\\JenkinsTemp\\HelloWorld'
+           bat label: '', script: 'rd /s /q C:\\JenkinsTemp'
        }
        echo 'creating directory'
-       bat label: '', script: 'MKDIR "C:\\JenkinsTemp\\HelloWorld"'
-   }
-   dir('C:\\JenkinsTemp\\HelloWorld') {
-    // some block
-   }
-   stage('git'){
-       git branch: 'master', url: 'https://github.com/SaidMX/mysample.git'
-   }
-   stage('Build') {
+       bat label: '', script: 'MKDIR "C:\\JenkinsTemp"'
+    }
+    stage('Build') {
        echo 'compiling the program'
-       bat label: '', script: '"g++.exe" "HelloWorld.c" -o "C:\\JenkinsTemp\\HelloWorld\\HelloWorld"'
-   }
-   stage('Run') {
+       bat label: '', script: '"C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe" "HelloWorld.c" -o "C:\\JenkinsTemp"'
+    }
+    stage('Run') {
        echo 'executing the program'
-       bat label: '', script: '"C:\\JenkinsTemp\\HelloWorld\\HelloWorld"'
-   }
+       bat label: '', script: '"C:\\JenkinsTemp\\HelloWorld"'
+    }
 }
