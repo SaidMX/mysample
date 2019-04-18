@@ -12,7 +12,7 @@ node {
     // some block
    }
    stage('git'){
-       sh label: '', script: 'git clone git@github.com:SaidMX/mysample.git'
+       git branch: 'master', url: 'git@github.com:SaidMX/mysample.git'
    }
    stage('Build') {
        echo 'compiling the program'
