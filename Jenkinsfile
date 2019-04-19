@@ -14,7 +14,7 @@ node {
         // some block
         }
         script {
-        Choco pack
+        bat  'cpack'
         }
     }
 }
