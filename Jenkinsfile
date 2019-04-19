@@ -13,6 +13,6 @@ node {
         dir('C:\\Temp\\HelloWorld') {
         // some block
         }
-        bat label: '', script: '"choco pack"'
+        powershell label: '', script: '"C:\\Temp\\HelloWorld\\" choco pack'
     }
 }
