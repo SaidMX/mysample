@@ -13,7 +13,7 @@ node {
         dir('C:\\Temp\\HelloWorld') {
         // some block
         }
-        bat '"C:\\Temp\\HelloWorld" cpack'
+        bat 'cpack "C:\\Temp\\HelloWorld"'
         
     }
 }
