@@ -5,7 +5,7 @@ node {
     }
     stage('Build') {
        echo 'compiling the program'
-       bat label: '', script: '"C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe" "HelloWorld.c" -o "Create Chocolatey package for C++ program\\HelloWorld\\tools\\HelloWorld"'
+       bat label: '', script: '"C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe" "Create Chocolatey package for C++ program\\HelloWorld.c" -o "Create Chocolatey package for C++ program\\HelloWorld\\tools\\HelloWorld"'
     }
     stage('Create Package'){
 
