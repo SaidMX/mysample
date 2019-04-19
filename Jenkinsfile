@@ -8,12 +8,9 @@ node {
        bat label: '', script: '"C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe" "HelloWorld.c" -o "Create Chocolatey package for C++ program\\HelloWorld\\tools\\HelloWorld"'
     }
     stage('Create Package'){
+
+        bat label: '', script: 'cpack "Create Chocolatey package for C++ program\\HelloWorld\\helloworld.nuspec"'
         bat label: '', script: 'XCOPY "Create Chocolatey package for C++ program\\HelloWorld" "C:\\Temp\\HelloWorld\\" /S /Y'
-        
-        dir('C:\\Temp\\HelloWorld\\') {
-        // some block
-        }
-        bat label: '', script: 'cpack "C:\\Temp\\HelloWorld\\helloworld.nuspec" "C:\\Temp\\HelloWorld\\"'
-        
+        bat label: '', script: 'XCOPY "*.nupkg" "C:\\Temp\\HelloWorld\\" /S /Y'
     }
 }
