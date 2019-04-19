@@ -13,6 +13,8 @@ node {
         dir('C:\\Temp\\HelloWorld') {
         // some block
         }
-        powershell label: '', script: '"choco pack"'
+        script {
+        Choco pack
+        }
     }
 }
