@@ -13,7 +13,7 @@ node {
         dir('C:\\Temp\\HelloWorld') {
         // some block
         }
-        powershell 'cpack'
+        powershell label '', script: "C:\\Temp\\HelloWorld" cpack'
         
     }
 }
