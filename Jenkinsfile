@@ -13,8 +13,7 @@ node {
         dir('C:\\Temp\\HelloWorld') {
         // some block
         }
-        script {
-        bat  'cpack'
-        }
+        powershell 'cpack'
+        
     }
 }
