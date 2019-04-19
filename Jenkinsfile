@@ -10,7 +10,7 @@ node {
     stage('Create Package'){
         bat label: '', script: 'XCOPY "Create Chocolatey package for C++ program\\HelloWorld" "C:\\Temp\\HelloWorld\\" /S /Y'
         
-        dir('C:\\Temp\\HelloWorld') {
+        dir('C:\\Temp\\HelloWorld\\') {
         // some block
         }
         bat label: '', script: 'cpack "C:\\Temp\\HelloWorld\\helloworld.nuspec" "C:\\Temp\\HelloWorld\\"'
